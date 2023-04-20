@@ -1,0 +1,33 @@
+.container-img {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 20px auto;
+    border: 1px solid black;
+}   
+
+.meme {
+    width: 450px;
+    height: 450px;
+}
+
+figure p{
+    font-family: Roboto;
+    font-size: 22px;
+    color: white;
+    word-break: break-all;
+}
+
+.texto-encima{
+    width: 100%;
+    bottom: 82%;
+    position: absolute;
+    text-align: center;
+}
+
+.texto-debajo{
+    width: 100%;
+    top: 82%;
+    position: absolute;
+    text-align: center;
+}
