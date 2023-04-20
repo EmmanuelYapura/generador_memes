@@ -16,6 +16,18 @@
     align-items: center;
 }
 
+.inputs{
+    display: flex;
+}
+
+.inputs input{
+    margin: 0 5px;
+}
+
+.inputText{
+    padding: 4px 0;
+}
+
 .meme {
     width: 450px;
     height: 450px;

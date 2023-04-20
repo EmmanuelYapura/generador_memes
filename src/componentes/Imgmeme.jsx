@@ -16,7 +16,7 @@ export function Imgmeme() {
         setTextoMeme2(e.target.value);
     }
 
-    function cambiarUrlImg(e){
+    function cambiarUrlImg(e) {
         setUrlImg(e.target.value);
     }
 
@@ -30,39 +30,54 @@ export function Imgmeme() {
         });
     }
 
-    function cambiaPosicionSuperior (e) {
+    function cambiaPosicionSuperior(e) {
         const $textoEncima = document.querySelector('.texto-encima');
         $textoEncima.style.textAlign = e.target.value;
     }
 
-    
-    function cambiaPosicionInferior (e) {
+
+    function cambiaPosicionInferior(e) {
         const $textoDebajo = document.querySelector('.texto-debajo');
         $textoDebajo.style.textAlign = e.target.value;
+    }
+
+    function cambiarColorTextoSuperior(e){
+        const $textoEncima = document.querySelector('.texto-encima');
+        $textoEncima.style.color = e.target.value;
+    }
+
+    function cambiarColorTextoInferior(e){
+        const $textoDebajo = document.querySelector('.texto-debajo');
+        $textoDebajo.style.color =e.target.value;
     }
 
     return (
         <div>
             <h1>Edita tu propio meme</h1>
             <h2>Escribi tu texto</h2>
-
-            {/* Esto podria ir en un div */}
+            
             <div className="contenedorInputs">
-            <input onChange={textmeme} type="text" className="" placeholder="texto 1" />
-            <p onChange={cambiaPosicionSuperior}>
-                <input type="radio" name="posicion" value="start" />principio
-                <input type="radio" name="posicion" value="center" defaultChecked/>medio
-                <input type="radio" name="posicion" value="end" />fin
-            </p>
+                <div className="inputs">
+                    <input onChange={textmeme} type="text" className="inputText" placeholder="texto 1" />
+                    <input onChange={cambiarColorTextoSuperior} type="color" />
+                </div>
+                <p onChange={cambiaPosicionSuperior}>
+                    <input type="radio" name="posicion" value="start" />principio
+                    <input type="radio" name="posicion" value="center" defaultChecked />medio
+                    <input type="radio" name="posicion" value="end" />fin
+                </p>
             </div>
 
             <div className="contenedorInputs">
-            <input onChange={textmeme2} type="text" className="" placeholder="texto 2" />
-            <p onChange={cambiaPosicionInferior}>
-                <input type="radio" name="posicion2" value="start" />principio
-                <input type="radio" name="posicion2" value="center" defaultChecked/>medio
-                <input type="radio" name="posicion2" value="end" />fin
-            </p>
+                <div className="inputs">
+                    <input onChange={textmeme2} type="text" className="inputText" placeholder="texto 2" />
+                    <input onChange={cambiarColorTextoInferior} type="color" />
+                </div>
+                <p onChange={cambiaPosicionInferior}>
+                    <input type="radio" name="posicion2" value="start" />principio
+                    <input type="radio" name="posicion2" value="center" defaultChecked />medio
+                    <input type="radio" name="posicion2" value="end" />fin
+                </p>
             </div>
 
             <h2>Elegi tu imagen</h2>
