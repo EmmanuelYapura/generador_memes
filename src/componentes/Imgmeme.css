@@ -6,6 +6,12 @@
     border: 1px solid black;
 }   
 
+.contenedorInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .meme {
     width: 450px;
     height: 450px;
