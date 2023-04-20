@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .container-img {
     position: relative;
     width: 450px;
@@ -29,6 +33,7 @@ figure p{
     bottom: 82%;
     position: absolute;
     text-align: center;
+    padding: 0 15px;
 }
 
 .texto-debajo{
@@ -36,4 +41,5 @@ figure p{
     top: 82%;
     position: absolute;
     text-align: center;
+    padding: 0 15px;
 }
