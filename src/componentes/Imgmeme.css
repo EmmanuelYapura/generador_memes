@@ -2,12 +2,18 @@
     box-sizing: border-box;
 }
 
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .container-img {
     position: relative;
     width: 450px;
     height: 450px;
     margin: 20px auto;
-    border: 1px solid black;
 }   
 
 .contenedorInputs{
@@ -25,10 +31,10 @@
 }
 
 .inputText{
-    padding: 4px 0;
+    padding: 4px;
 }
 
-.meme {
+.contenedorControles, .meme {
     width: 450px;
     height: 450px;
 }
@@ -54,4 +60,18 @@ figure p{
     position: absolute;
     text-align: center;
     padding: 0 15px;
+}
+
+@media (max-width: 900px) {
+    .contenedor{
+        flex-direction: column;
+    }
+
+    .container-img {
+        height: 400px;
+    }   
+    
+    .contenedorControles, .meme {
+        height: 400px;
+    }
 }
